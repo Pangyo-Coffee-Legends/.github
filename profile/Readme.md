@@ -12,14 +12,16 @@ AI 및 IoT 기술을 융합하여 **쾌적한 업무 환경**과 **효율적인 
 
 ### 🎯 주요 기능
 
-| 기능 | 설명 |
-|------|------|
-| 🌡️ 환경 센싱 및 저장 | 센서 데이터를 MQTT/Modbus로 수집하고 InfluxDB에 저장 |
-| 🤖 AI 쾌적도 분석 | 온습도/CO₂ 기반 쾌적도 예측 모델 |
-| 🔐 출입 통제/근태 분석 | 출입 로그 기반 근무 시간 계산 및 이상 감지 |
+| 기능             | 설명                                                   |
+| -------------- | ---------------------------------------------------- |
+| 🌡️ 환경 센싱 및 저장 | 센서 데이터를 MQTT/Modbus로 수집하고 InfluxDB에 저장               |
+| 🤖 AI 쾌적도 분석   | 온습도/CO₂ 기반 쾌적도 예측 모델                                 |
+| 🌍 환경 모니터링     | 기기 관리, 룰 관리, 장소 관리 기능 제공                             |
+| 🔐 출입 통제/근태 분석 | 출입 로그 기반 근무 시간 계산 및 이상 감지                            |
 | 📊 ELK 로그 모니터링 | Filebeat → Logstash → Elasticsearch → Kibana 대시보드 구성 |
-| 🗓️ 회의실 예약 시스템 | 예약, 입장, 노쇼, 연장 등 기능 통합 |
-| 💬 실시간 채팅/알림 | WebSocket 기반 채팅, 알림 팝업 구현 |
+| 🗓️ 회의실 예약 시스템 | 예약, 입장, 노쇼, 연장 등 기능 통합                               |
+| 💬 실시간 채팅/알림   | WebSocket 기반 채팅, 알림 팝업 구현                            |
+
 
 ---
 
@@ -55,9 +57,9 @@ AI 및 IoT 기술을 융합하여 **쾌적한 업무 환경**과 **효율적인 
 |--------------|-----------|
 | 📌 백엔드     | Spring Boot, Spring Security, Spring Cloud Config, JPA |
 | 🎨 프론트엔드 | HTML, CSS, JavaScript (Vanilla), Bootstrap |
-| 🛠️ 인프라     | Docker, Nginx, GitHub Actions, AWS EC2 |
-| 💾 DB/저장소  | InfluxDB, MySQL, Elasticsearch |
+| 🛠️ 인프라     | Docker, Nginx, GitHub Actions |
+| 💾 DB/저장소  | InfluxDB, MySQL, Elasticsearch, H2, Redis |
 | 🧠 AI/분석     | Python, XGBoost, Pandas, FastAPI |
-| 📡 실시간     | WebSocket, MQTT, Rule Engine |
+| 📡 실시간     | WebSocket, MQTT, Rule Engine, RabbitMQ |
 | 📊 로그 시스템| Filebeat, Logstash, Kibana (ELK) |
 
