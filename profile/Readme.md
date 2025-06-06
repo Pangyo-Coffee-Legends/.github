@@ -20,7 +20,7 @@ AI 및 IoT 기술을 융합하여 **쾌적한 업무 환경**과 **효율적인 
 | 🔐 출입 통제/근태 분석 | 출입 로그 기반 근무 시간 계산 및 이상 감지                            |
 | 📊 ELK 로그 모니터링 | Filebeat → Logstash → Elasticsearch → Kibana 대시보드 구성 |
 | 🗓️ 회의실 예약 시스템 | 예약, 입장, 노쇼, 연장 등 기능 통합                               |
-| 💬 실시간 채팅/알림   | WebSocket 기반 채팅, 알림 팝업 구현                            |
+| 💬 실시간 채팅/알림   | Stomp 기반 실시간 채팅 / 알림 팝업 구현                            |
 
 
 ---
@@ -44,11 +44,13 @@ AI 및 IoT 기술을 융합하여 **쾌적한 업무 환경**과 **효율적인 
 ## 🏗️ 시스템 아키텍처
 
 ```plaintext
-[센서/사용자] 
+[센서/사용자] → Spring Gateway → [채팅] → 사용자
    ↓ MQTT/Modbus
 [IoT 서버] → [InfluxDB] → [AI 모델 서버] → [대시보드/알림]
    ↘ 로그 → Filebeat → Logstash → Elasticsearch → Kibana
    ↘ 예약/출입 관리 → Spring Gateway → REST API
+         ↘ 이벤트 발생 시
+               → [이벤트 브로커] → [알림] → 사용자
 ```
 
 ## ⚙️ 기술 스택
@@ -60,6 +62,6 @@ AI 및 IoT 기술을 융합하여 **쾌적한 업무 환경**과 **효율적인 
 | 🛠️ 인프라     | Docker, Nginx, GitHub Actions |
 | 💾 DB/저장소  | InfluxDB, MySQL, Elasticsearch, H2, Redis |
 | 🧠 AI/분석     | Python, XGBoost, Pandas, FastAPI |
-| 📡 실시간     | WebSocket, MQTT, Rule Engine, RabbitMQ |
+| 📡 실시간     | Stomp, MQTT, Rule Engine, RabbitMQ |
 | 📊 로그 시스템| Filebeat, Logstash, Kibana (ELK) |
 
