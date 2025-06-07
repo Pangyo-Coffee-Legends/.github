@@ -25,33 +25,9 @@ AI 및 IoT 기술을 융합하여 **쾌적한 업무 환경**과 **효율적인 
 
 ---
 
-## 👨‍👩‍👧‍👦 팀원 소개
-## 👥 팀원 소개
-
-| 프로필 | 이름 | 담당 역할 | GitHub |
-|--------|------|-----------|--------|
-| <img src="https://github.com/dusen0528.png" width="50"/> | 최인호 | 쾌적도 AI · ELK 로그 · CI/CD · 통합 인프라 | [@dusen0528](https://github.com/dusen0528) |
-| <img src="https://github.com/HyunSubb.png" width="50"/> | 신현섭 | 채팅 시스템 · 실시간 알림 | [@HyunSubb](https://github.com/HyunSubb) |
-| <img src="https://github.com/rudduddl.png" width="50"/> | 김경영 | 출입 통제 · 근태 분석 | [@rudduddl](https://github.com/rudduddl) |
-| <img src="https://github.com/Migong0311.png" width="50"/> | 김미성 | 근태 분석 · 리포트 · Gemini 기반 분석 | [@Migong0311](https://github.com/Migong0311) |
-| <img src="https://github.com/oculusK.png" width="50"/> | 강승우 | 환경 모니터링 · 이상 탐지 · Rule Engine | [@oculusK](https://github.com/oculusK) |
-| <img src="https://github.com/phh624.png" width="50"/> | 박형호 | 환경 모니터링 · IoT 서비스 · JS 연동 | [@phh624](https://github.com/phh624) |
-| <img src="https://github.com/Jyurim.png" width="50"/> | 전유림 | 회의실 예약 · 알림 · 대시보드 | [@Jyurim](https://github.com/Jyurim) |
-| <img src="https://github.com/LEMON4DE.png" width="50"/> | 김지윤 | 예약 예외처리 · 입실 코드 · 통계 | [@LEMON4DE](https://github.com/LEMON4DE) |
-
----
-
 ## 🏗️ 시스템 아키텍처
 
-```plaintext
-[센서/사용자] → Spring Gateway → [채팅] → 사용자
-   ↓ MQTT/Modbus
-[IoT 서버] → [InfluxDB] → [AI 모델 서버] → [대시보드/알림]
-   ↘ 로그 → Filebeat → Logstash → Elasticsearch → Kibana
-   ↘ 예약/출입 관리 → Spring Gateway → REST API
-         ↘ 이벤트 발생 시
-               → [이벤트 브로커] → [알림] → 사용자
-```
+![image](https://github.com/user-attachments/assets/35b29f09-cae4-4515-af45-f5da3282e229)
 
 ## ⚙️ 기술 스택
 
@@ -64,4 +40,22 @@ AI 및 IoT 기술을 융합하여 **쾌적한 업무 환경**과 **효율적인 
 | 🧠 AI/분석     | Python, XGBoost, Pandas, FastAPI |
 | 📡 실시간     | Stomp, MQTT, Rule Engine, RabbitMQ |
 | 📊 로그 시스템| Filebeat, Logstash, Kibana (ELK) |
+
+---
+
+## 👥 팀원 소개
+
+| 프로필 | 이름 | 담당 역할 | GitHub |
+|--------|------|-----------|--------|
+| <img src="https://github.com/dusen0528.png" width="50"/> | 최인호 | 쾌적도 AI · ELK 로그 · CI/CD · 통합 인프라 | [@dusen0528](https://github.com/dusen0528) |
+| <img src="https://github.com/HyunSubb.png" width="50"/> | 신현섭 | 채팅 시스템 · 실시간 알림 | [@HyunSubb](https://github.com/HyunSubb) |
+| <img src="https://github.com/rudduddl.png" width="50"/> | 김경영 | 출입 통제 · 근태 분석 | [@rudduddl](https://github.com/rudduddl) |
+| <img src="https://github.com/Migong0311.png" width="50"/> | 김미성 | 근태 분석 · 리포트 · Gemini 기반 분석 | [@Migong0311](https://github.com/Migong0311) |
+| <img src="https://github.com/oculusK.png" width="50"/> | 강승우 | 환경 모니터링 · 이상 탐지 · Rule Engine | [@oculusK](https://github.com/oculusK) |
+| <img src="https://github.com/phh624.png" width="50"/> | 박형호 | 환경 모니터링 · IoT 서비스 · JS 연동 | [@phh624](https://github.com/phh624) |
+| <img src="https://github.com/Jyurim.png" width="50"/> | 전유림 | 회의실 예약 · 알림 · 대시보드 | [@Jyurim](https://github.com/Jyurim) |
+| <img src="https://github.com/LEMON4DE.png" width="50"/> | 김지윤 | 회의실 CRUD · 회의실 예약 건 입실 통합관리 · 통계 | [@LEMON4DE](https://github.com/LEMON4DE) |
+
+---
+
 
